@@ -1,0 +1,15 @@
+[package]
+name = "sentinel-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+serde.workspace = true
+serde_yaml.workspace = true
+tokio.workspace = true
+
+sentinel-config.workspace = true
+sentinel-policy.workspace = true

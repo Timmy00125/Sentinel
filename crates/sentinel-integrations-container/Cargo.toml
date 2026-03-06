@@ -1,0 +1,10 @@
+[package]
+name = "sentinel-integrations-container"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+async-trait.workspace = true
+chrono.workspace = true
+sentinel-core.workspace = true

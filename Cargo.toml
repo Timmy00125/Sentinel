@@ -1,0 +1,49 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/sentinel-cli",
+    "crates/sentinel-core",
+    "crates/sentinel-config",
+    "crates/sentinel-policy",
+    "crates/sentinel-collector",
+    "crates/sentinel-detection",
+    "crates/sentinel-decision",
+    "crates/sentinel-executor",
+    "crates/sentinel-audit",
+    "crates/sentinel-telemetry",
+    "crates/sentinel-integrations-host",
+    "crates/sentinel-integrations-container",
+    "crates/sentinel-integrations-k8s",
+    "crates/sentinel-integrations-lb",
+]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+version = "0.1.0"
+
+[workspace.dependencies]
+anyhow = "1"
+async-trait = "0.1"
+chrono = { version = "0.4", features = ["clock", "serde"] }
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "signal", "time"] }
+tracing = "0.1"
+
+sentinel-audit = { path = "crates/sentinel-audit" }
+sentinel-collector = { path = "crates/sentinel-collector" }
+sentinel-config = { path = "crates/sentinel-config" }
+sentinel-core = { path = "crates/sentinel-core" }
+sentinel-decision = { path = "crates/sentinel-decision" }
+sentinel-detection = { path = "crates/sentinel-detection" }
+sentinel-executor = { path = "crates/sentinel-executor" }
+sentinel-integrations-container = { path = "crates/sentinel-integrations-container" }
+sentinel-integrations-host = { path = "crates/sentinel-integrations-host" }
+sentinel-integrations-k8s = { path = "crates/sentinel-integrations-k8s" }
+sentinel-integrations-lb = { path = "crates/sentinel-integrations-lb" }
+sentinel-policy = { path = "crates/sentinel-policy" }
+sentinel-telemetry = { path = "crates/sentinel-telemetry" }
